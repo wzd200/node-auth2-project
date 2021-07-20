@@ -16,6 +16,7 @@ const restricted = (req, res, next) => {
         message: 'Token invalid'
       })
     }
+    req.decodedJwt = decodedToken
     next()
   })
   /*
