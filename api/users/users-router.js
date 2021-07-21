@@ -41,7 +41,7 @@ router.get("/", restricted, (req, res, next) => { // done for you
   ]
  */
 router.get("/:user_id", 
-  // restricted, 
+  restricted, 
   only('admin'), 
   (req, res, next) => { // done for you
     Users.findById(req.params.user_id)
