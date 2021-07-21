@@ -18,7 +18,7 @@ router.post("/register", validateRoleName, async (req, res, next) => {
     }
 
     const dbUser = await Users.add(newUser)
-    res.status(201).json({dbUser})
+    res.status(201).json(dbUser)
   } catch (err) {
     next(err)
   }
